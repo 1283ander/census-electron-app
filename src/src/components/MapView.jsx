@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import styled from 'styled-components';
 import L from 'leaflet';
@@ -19,6 +19,15 @@ const MapWrapper = styled.div`
 `;
 
 const MapView = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch('data/census-data.json')
+      .then((response) => response.json())
+      .then((jsonData) => setData(jsonData))
+      .catch((error) => console.error('Error fetching data:', error));
+  }, []);
+
   return (
     <MapWrapper>
       <MapContainer center={[37.0902, -95.7129]} zoom={4} style={{ height: '100%', width: '100%' }}>
@@ -26,10 +35,15 @@ const MapView = () => {
           attribution='&copy; <a href="https://osm.org/copyright">OpenStreetMap</a>'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        {/* Example Marker */}
-        <Marker position={[40.7128, -74.0060]}>
-          <Popup>New York City</Popup>
-        </Marker>
+        {data.map((item, index) => (
+          <Marker key={index} position={item.coordinates}>
+            <Popup>
+              <strong>{item.state}</strong><br/>
+              Population: {item.population.toLocaleString()}<br/>
+              Median Age: {item.medianAge}
+            </Popup>
+          </Marker>
+        ))}
       </MapContainer>
     </MapWrapper>
   );
