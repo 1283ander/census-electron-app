@@ -1,0 +1,22 @@
+[
+  {
+    "state": "California",
+    "population": 39512223,
+    "medianAge": 36.5
+  },
+  {
+    "state": "Texas",
+    "population": 28995881,
+    "medianAge": 34.8
+  },
+  {
+    "state": "Florida",
+    "population": 21477737,
+    "medianAge": 42.2
+  },
+  {
+    "state": "New York",
+    "population": 19453561,
+    "medianAge": 38.4
+  }
+]

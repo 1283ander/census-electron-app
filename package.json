@@ -1,0 +1,28 @@
+{
+  "name": "census-electron-app",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "concurrently \"npm run start-react\" \"npm run start-electron\"",
+    "start-react": "cd src && npm start",
+    "start-electron": "wait-on http://localhost:3000 && electron .",
+    "build": "cd src && npm run build && electron-builder"
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0",
+    "electron": "^25.3.0",
+    "wait-on": "^7.0.0",
+    "electron-builder": "^23.6.0"
+  },
+  "dependencies": {
+    // React dependencies are managed in src/package.json
+  },
+  "build": {
+    "appId": "com.jake.censuselectronapp",
+    "mac": {
+      "category": "public.app-category.utilities"
+    },
+    "win": {},
+    "linux": {}
+  }
+}
