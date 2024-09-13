@@ -14,9 +14,7 @@
     "wait-on": "^7.0.0",
     "electron-builder": "^23.6.0"
   },
-  "dependencies": {
-    // React dependencies are managed in src/package.json
-  },
+  "dependencies": {},
   "build": {
     "appId": "com.jake.censuselectronapp",
     "mac": {
