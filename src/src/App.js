@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import DataTable from './components/DataTable';
 import MapView from './components/MapView';
 import SearchBar from './components/SearchBar';
+import PopulationChart from './components/PopulationChart';
 import './App.css';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <p>Navigate through census data and maps.</p>
           <SearchBar value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
           <DataTable searchTerm={searchTerm} />
+          <PopulationChart />
         </div>
         <div className="right-panel">
           <MapView />
