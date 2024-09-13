@@ -1,6 +1,6 @@
 export const colors = {
-  primary: '#007AFF', // Apple blue
-  secondary: '#5856D6', // Apple purple
+  primary: '#007AFF', // Apple Blue
+  secondary: '#5856D6', // Apple Purple
   background: '#FFFFFF', // White
   text: '#000000', // Black
   lightGray: '#F2F2F2',

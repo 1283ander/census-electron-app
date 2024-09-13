@@ -4,17 +4,19 @@ body {
   margin: 0;
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  background-color: #FFFFFF;
+  background-color: #F2F2F2; /* Light Gray Background */
 }
 
 h1 {
   font-size: 2em;
-  color: #007AFF;
+  color: #007AFF; /* Apple Blue */
+  margin-bottom: 0.5em;
 }
 
 p {
   font-size: 1.2em;
   color: #333333;
+  margin-bottom: 1em;
 }
 
 .container {
@@ -36,4 +38,54 @@ p {
 
 .left-panel, .right-panel {
   margin-bottom: 20px;
+}
+
+button {
+  background-color: #007AFF;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0051A8;
+}
+
+input, select {
+  padding: 10px;
+  border: 1px solid #CCCCCC;
+  border-radius: 8px;
+  font-size: 1em;
+  margin-bottom: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: inherit;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #DDDDDD;
+}
+
+th {
+  background-color: #007AFF;
+  color: white;
+  cursor: pointer;
+}
+
+tr:hover {
+  background-color: #F5F5F5;
 }

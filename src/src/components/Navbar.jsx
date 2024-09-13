@@ -5,7 +5,7 @@ import { colors, typography } from '../designTokens';
 const Nav = styled.nav`
   width: 100%;
   height: 60px;
-  background-color: ${colors.background};
+  background-color: ${colors.primary};
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -16,7 +16,7 @@ const Nav = styled.nav`
 const Logo = styled.div`
   font-size: 1.5em;
   font-weight: bold;
-  color: ${colors.primary};
+  color: ${colors.background};
   font-family: ${typography.fontFamily};
 `;
 
@@ -27,13 +27,13 @@ const NavLinks = styled.div`
 
 const NavLink = styled.a`
   text-decoration: none;
-  color: ${colors.text};
+  color: ${colors.background};
   font-size: 1em;
   font-family: ${typography.fontFamily};
   cursor: pointer;
 
   &:hover {
-    color: ${colors.primary};
+    color: ${colors.secondary};
   }
 `;
 
