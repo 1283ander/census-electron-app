@@ -6,7 +6,8 @@
     "start": "concurrently \"npm run start-react\" \"npm run start-electron\"",
     "start-react": "react-scripts start",
     "start-electron": "wait-on http://localhost:3000 && electron .",
-    "build": "cd src && npm run build && electron-builder"
+    "build": "cd src && npm run build && electron-builder",
+    "electron": "electron ."
   },
   "devDependencies": {
     "concurrently": "^9.0.1",
@@ -27,7 +28,7 @@
     "leaflet": "^1.9.4",
     "react-chartjs-2": "^5.2.0",
     "react-leaflet": "^4.2.1",
-    "react-scripts": "^5.0.1",
+    "react-scripts": "^3.4.4",
     "styled-components": "^6.1.13"
   }
 }
