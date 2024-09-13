@@ -4,7 +4,7 @@
   "main": "main.js",
   "scripts": {
     "start": "concurrently \"npm run start-react\" \"npm run start-electron\"",
-    "start-react": "BROWSER=none npm start",
+    "start-react": "react-scripts start",
     "start-electron": "wait-on http://localhost:3000 && electron .",
     "build": "cd src && npm run build && electron-builder"
   },
@@ -24,7 +24,10 @@
   },
   "dependencies": {
     "chart.js": "^4.4.4",
+    "leaflet": "^1.9.4",
     "react-chartjs-2": "^5.2.0",
+    "react-leaflet": "^4.2.1",
+    "react-scripts": "^5.0.1",
     "styled-components": "^6.1.13"
   }
 }
